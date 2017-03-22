@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>鼠标放上显示二维码</title>
+  <style>  
+  .box a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #888;
+  }
+  .box a:hover {
+    text-decoration: none;
+  }
+  .box img {
+    display: none;
+    width: 100px;
+    height: 100px;
+    position: absolute; /*如果大盒子不想被撑开高或者图片位置不是想要的位置，就给定位子绝父相，*/
+    left: 0;
+    top: 30px;
+  }
+  .box a:hover > img{/*鼠标放在a上图片显示*/
+    display: block;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <a href="#">
+      <span>二维码</span>
+      <img src="img/二维码.jpg" alt="扫一扫">
+    </a>
+  </div>
+</body>
+</html>
